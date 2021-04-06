@@ -33,7 +33,7 @@ public class ProductService {
                 .parallel(2)
                 .runOn(Schedulers.parallel())
                 .map(product -> {
-                    product.setShortNumber(ThreadLocalRandom.current().nextInt());
+                    product.setShortNumber(ThreadLocalRandom.current().nextInt(1000, 10000));
                     return productRepository.save(product).block();
                 }).sequential();
     }
