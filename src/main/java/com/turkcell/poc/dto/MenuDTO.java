@@ -1,19 +1,15 @@
-package com.turkcell.poc.entity;
+package com.turkcell.poc.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="menu")
-public class Menu implements Serializable {
+public class MenuDTO implements Serializable {
     
-    @Id
     private Long id;
     
     private String name;
 
-    public Menu() {
+    public MenuDTO() {
     }
 
     public Long getId() {
@@ -50,7 +46,7 @@ public class Menu implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Menu other = (Menu) obj;
+        final MenuDTO other = (MenuDTO) obj;
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
@@ -59,7 +55,7 @@ public class Menu implements Serializable {
 
     @Override
     public String toString() {
-        return "Menu{" + "id=" + id + ", name=" + name + '}';
+        return "MenuDTO{" + "id=" + id + ", name=" + name + '}';
     }
     
 }

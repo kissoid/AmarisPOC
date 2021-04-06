@@ -5,16 +5,20 @@
  */
 package com.turkcell.poc.repository;
 
-import com.turkcell.poc.dto.MenuDTO;
+import com.turkcell.poc.dto.ProductDTO;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Flux;
 
 /**
  *
  * @author kissoid
  */
 @Repository
-public interface MenuRepository extends ReactiveCrudRepository<MenuDTO, Long> {
+public interface ProductRepository extends ReactiveCrudRepository<ProductDTO, Long> {
+    
+    Flux<ProductDTO> findProducts(Pageable pageable);
     
     
 }

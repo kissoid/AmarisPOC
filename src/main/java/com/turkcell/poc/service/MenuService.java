@@ -1,6 +1,6 @@
 package com.turkcell.poc.service;
 
-import com.turkcell.poc.entity.Menu;
+import com.turkcell.poc.dto.MenuDTO;
 import com.turkcell.poc.repository.MenuRepository;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -15,7 +15,7 @@ public class MenuService {
         this.menuRepository = menuRepository;
     }
     
-    public Flux<Menu> getMenuList(){
+    public Flux<MenuDTO> getMenuList(){
         return menuRepository.findAll();
     }
     
