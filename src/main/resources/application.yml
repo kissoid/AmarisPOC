@@ -1,3 +1,9 @@
 spring:
-   application:
-      name: poc
+  application:
+    name: poc
+  data:
+    mongodb:
+      database: amaris
+      username: amaris
+      password: amaris
+

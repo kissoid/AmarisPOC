@@ -5,7 +5,7 @@
  */
 package com.turkcell.poc.repository;
 
-import com.turkcell.poc.document.Menu;
+import com.turkcell.poc.document.RequestLog;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
  * @author kissoid
  */
 @Repository
-public interface MenuRepository extends ReactiveCrudRepository<Menu, Long> {
+public interface RequestLogRepository extends ReactiveCrudRepository<RequestLog, String> {
     
     
 }

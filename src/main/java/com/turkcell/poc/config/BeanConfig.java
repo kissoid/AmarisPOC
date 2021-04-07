@@ -2,7 +2,9 @@ package com.turkcell.poc.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class BeanConfig {
 
     @Bean
@@ -10,4 +12,5 @@ public class BeanConfig {
         return new ModelMapper();
     }
 
+    
 }

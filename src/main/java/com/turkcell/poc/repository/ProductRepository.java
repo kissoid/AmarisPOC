@@ -5,9 +5,9 @@
  */
 package com.turkcell.poc.repository;
 
-import com.turkcell.poc.dto.ProductDTO;
+import com.turkcell.poc.document.Product;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import org.springframework.data.repository.reactive.ReactiveSortingRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
 
@@ -16,9 +16,9 @@ import reactor.core.publisher.Flux;
  * @author kissoid
  */
 @Repository
-public interface ProductRepository extends ReactiveCrudRepository<ProductDTO, Long> {
-    
-    Flux<ProductDTO> findProducts(Pageable pageable);
+public interface ProductRepository extends ReactiveSortingRepository<Product, Long> {
+
+    Flux<Product> findByIdNotNull(Pageable pageable);
     
     
 }

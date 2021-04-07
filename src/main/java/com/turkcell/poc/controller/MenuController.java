@@ -20,11 +20,12 @@ public class MenuController {
         this.modelMapper = modelMapper;
     }
 
-    @RequestMapping(method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+    @RequestMapping(value="getMenuList", method = RequestMethod.GET, produces = "application/json")
     public Flux<MenuDTO> getMenuList() {
-        return menuService.getMenuList()
+        Flux<MenuDTO> dtoList = menuService.getMenuList()
                 .map(menu -> modelMapper.map(menu, MenuDTO.class));
-
+        System.out.println(dtoList);
+        return  dtoList;
     }
 
 }

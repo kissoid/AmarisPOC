@@ -1,11 +1,11 @@
-package com.turkcell.poc.entity;
+package com.turkcell.poc.document;
 
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="product")
+@Document(collection="Product")
 public class Product implements Serializable {
     
     @Id

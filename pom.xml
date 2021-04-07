@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
     <groupId>com.turkcell.poc</groupId>
-    <artifactId>poc</artifactId>
+    <artifactId>AmarisPOC</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>poc</name>
+    <name>AmarisPOC</name>
     <description>Poc app</description>
     <properties>
         <java.version>11</java.version>
@@ -73,6 +73,7 @@
     </dependencies>
 
     <build>
+        <finalName>AmarisPOC</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -1,11 +1,11 @@
-package com.turkcell.poc.entity;
+package com.turkcell.poc.document;
 
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="menu")
+@Document(collection="Menu")
 public class Menu implements Serializable {
     
     @Id
@@ -14,6 +14,11 @@ public class Menu implements Serializable {
     private String name;
 
     public Menu() {
+    }
+
+    public Menu(Long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public Long getId() {

@@ -1,8 +1,10 @@
 package com.turkcell.poc.controller;
 
 import com.turkcell.poc.dto.ProductDTO;
+import com.turkcell.poc.document.Product;
 import com.turkcell.poc.service.ProductService;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +25,7 @@ public class ProductController {
         this.modelMapper = modelMapper;
     }
 
-    @RequestMapping(value = "/getProductList", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/getProductList", method = RequestMethod.GET, produces = "application/json")
     public Flux<ProductDTO> getProductList(
             @RequestParam("pageIndex") int pageIndex,
             @RequestParam("pageSize") int pageSize) {
@@ -31,8 +33,11 @@ public class ProductController {
                 .map(product -> modelMapper.map(product, ProductDTO.class));
     }
 
-    @RequestMapping(value = "/updateProductInfo", method = RequestMethod.PUT, produces = "application/json;charset=UTF-8")
-    public Flux<ProductDTO> updateProductInfo(@RequestBody List<ProductDTO> productList) {
+    @RequestMapping(value = "/updateProductInfo", method = RequestMethod.PUT, produces = "application/json")
+    public Flux<ProductDTO> updateProductInfo(@RequestBody List<ProductDTO> dtoList) {
+        List<Product> productList = dtoList.stream()
+                .map(productDTO -> modelMapper.map(productDTO, Product.class))
+                .collect(Collectors.toList());
         return productService.updateProductInfo(productList)
                 .map(product -> modelMapper.map(product, ProductDTO.class));
     }
