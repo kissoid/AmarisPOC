@@ -8,7 +8,11 @@ database: amaris,
 username: amaris,
 password: amaris
 
-## Service endpoint adresleri
+## Rest Service'ler
+
+Service'ler geliştirilirken, Spring Reactive Web kullanılmıştır.
+
+## Rest Service Endpoint adresleri
 
 ### Menu listesini almak için : 
 
@@ -18,7 +22,7 @@ Method          : GET
 
 ### Ürün lisesini almak için : 
 
-Bu serviste paging yapılmıştır. Aşağıdaki örnekte ilk 20 adet kayıt getirilmektedir. Örnek oalrak uygulama açılışında dataabse'e 1000 adet kayıt atılacaktır. Tüm kayıtları bir defada görmek için pageSize değerini 100 veya üzeri bir değer olarak değiştirmeniz yeterlidir.
+Bu serviste paging yapılmıştır. Aşağıdaki örnekte ilk 20 adet kayıt getirilmektedir. Örnek olarak uygulama açılışında database'e 1000 adet kayıt atılacaktır. Tüm kayıtları bir defada görmek için pageSize parametre değerini 1000 veya üzeri bir değer olarak değiştirmeniz yeterlidir.
 
 Service Adresi  : http://localhost:8080/api/v1/products/getProductList?pageIndex=0&pageSize=20
 
@@ -27,7 +31,7 @@ Method          : GET
 
 ### Ürün kısa numarasılarını update etmek için : 
 
-BU servis request body'sinde Json listesi alır.
+Bu servis request body'sinde Json listesi alır ve bu listedeki kaytlar üzerinde işlem yapmak için paralel çalışmak üzere iki thread kullanır.
 
 Service Adresi  : http://localhost:8080/api/v1/products/updateProductInfo
 
@@ -82,3 +86,20 @@ Method          : PUT
       "shortNumber":58453
    }
 ]
+
+
+## Logging
+
+Loglama için logback kullanılmıştır.
+
+## Service Request Logging
+
+Servise gelen requestve detayları, MongoDB üzerindeki Amaris DB'si altındaki RequestLog adlı collectiona içerisine kaydedilmektedir. 
+
+## Unit Test
+
+Menu ve Product servisleri için Unit Test'ler oluşturulmuştur.
+
+## Dockerize
+
+Uygulama'nın dockerize edilebilmesi için Dockerfile base path altına eklenmiştir.
