@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: poc
+  data:
+    mongodb:
+      database: amaris
+      username: amaris
+      password: amaris
+      
+logging:
+  level:
+    org: 
+      springframework: INFO 
+    com:
+      turkcell: INFO
+
