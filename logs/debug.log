@@ -1,0 +1,26 @@
+2021-04-08 03:03:26 [main] INFO  c.t.p.c.ProductControllerTest - Starting ProductControllerTest using Java 11.0.10 on kissoidDELL with PID 83475 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-04-08 03:03:26 [main] DEBUG c.t.p.c.ProductControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-08 03:03:26 [main] INFO  c.t.p.c.ProductControllerTest - No active profile set, falling back to default profiles: default
+2021-04-08 03:03:27 [main] INFO  c.t.p.c.ProductControllerTest - Started ProductControllerTest in 1.505 seconds (JVM running for 2.309)
+2021-04-08 03:03:27 [parallel-1] INFO  c.t.poc.controller.ProductController - Product list requested
+2021-04-08 03:03:27 [parallel-2] INFO  c.t.poc.controller.ProductController - Product info update requested
+2021-04-08 03:03:27 [main] INFO  c.t.poc.service.ProductService - Parallel process started
+2021-04-08 03:03:27 [main] INFO  c.t.p.controller.MenuControllerTest - Starting MenuControllerTest using Java 11.0.10 on kissoidDELL with PID 83475 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-04-08 03:03:27 [main] DEBUG c.t.p.controller.MenuControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-08 03:03:27 [main] INFO  c.t.p.controller.MenuControllerTest - No active profile set, falling back to default profiles: default
+2021-04-08 03:03:27 [main] INFO  c.t.p.controller.MenuControllerTest - Started MenuControllerTest in 0.327 seconds (JVM running for 2.995)
+2021-04-08 03:03:27 [parallel-5] INFO  c.t.poc.controller.MenuController - Menu list requested
+2021-04-08 03:03:35 [main] INFO  c.turkcell.poc.AmarisPocApplication - Starting AmarisPocApplication using Java 11.0.10 on kissoidDELL with PID 83757 (/home/kissoid/Projects/AmarisPOC/target/classes started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-04-08 03:03:35 [main] DEBUG c.turkcell.poc.AmarisPocApplication - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-08 03:03:35 [main] INFO  c.turkcell.poc.AmarisPocApplication - No active profile set, falling back to default profiles: default
+2021-04-08 03:03:38 [main] INFO  c.turkcell.poc.AmarisPocApplication - Started AmarisPocApplication in 2.763 seconds (JVM running for 3.156)
+2021-04-08 03:03:51 [http-nio-8080-exec-1] DEBUG c.t.p.interceptor.RequestInterceptor - Request unmarsahlling
+2021-04-08 03:03:51 [http-nio-8080-exec-1] INFO  c.t.p.interceptor.RequestInterceptor - Request log saved to mongo db
+2021-04-08 03:03:51 [http-nio-8080-exec-1] INFO  c.t.poc.controller.ProductController - Product list requested
+2021-04-08 03:03:51 [http-nio-8080-exec-2] DEBUG c.t.p.interceptor.RequestInterceptor - Request unmarsahlling
+2021-04-08 03:03:51 [http-nio-8080-exec-2] INFO  c.t.p.interceptor.RequestInterceptor - Request log saved to mongo db
+2021-04-08 03:03:58 [http-nio-8080-exec-3] DEBUG c.t.p.interceptor.RequestInterceptor - Request unmarsahlling
+2021-04-08 03:03:59 [http-nio-8080-exec-3] INFO  c.t.p.interceptor.RequestInterceptor - Request log saved to mongo db
+2021-04-08 03:03:59 [http-nio-8080-exec-3] INFO  c.t.poc.controller.ProductController - Product list requested
+2021-04-08 03:03:59 [http-nio-8080-exec-4] DEBUG c.t.p.interceptor.RequestInterceptor - Request unmarsahlling
+2021-04-08 03:03:59 [http-nio-8080-exec-4] INFO  c.t.p.interceptor.RequestInterceptor - Request log saved to mongo db

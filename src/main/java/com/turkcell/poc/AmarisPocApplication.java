@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
-public class PocApplication {
+public class AmarisPocApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PocApplication.class, args).start();
+        SpringApplication.run(AmarisPocApplication.class, args).start();
     }
 
 }

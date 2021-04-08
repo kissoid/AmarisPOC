@@ -13,6 +13,8 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -26,13 +28,15 @@ import reactor.core.scheduler.Schedulers;
 @Component
 public class RequestInterceptor extends HandlerInterceptorAdapter {
 
+    private static final Logger logger = LoggerFactory.getLogger(RequestInterceptor.class);
+    
     @Autowired
     private RequestLogService requestLogService;
     
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         ContentCachingRequestWrapper requestCacheWrapper   = new ContentCachingRequestWrapper(request);
-        
+        logger.debug("Request unmarsahlling");
         RequestLog requestLog = new RequestLog();
         requestLog.setId(UUID.randomUUID().toString());
         requestLog.setService(requestCacheWrapper.getRequestURI()); 
@@ -45,6 +49,7 @@ public class RequestInterceptor extends HandlerInterceptorAdapter {
                 .map(entry->new RequestParameter(entry.getKey(), entry.getValue()))
                 .collect(Collectors.toList()));
         requestLogService.createRequestLog(requestLog).subscribeOn(Schedulers.parallel()).subscribe();
+        logger.info("Request log saved to mongo db");
         return true;
     }
 

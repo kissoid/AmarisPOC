@@ -5,6 +5,8 @@ import com.turkcell.poc.document.Product;
 import com.turkcell.poc.service.MenuService;
 import com.turkcell.poc.service.ProductService;
 import java.util.concurrent.ThreadLocalRandom;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.context.event.EventListener;
@@ -15,6 +17,8 @@ import reactor.core.scheduler.Schedulers;
 @Component
 public class ContextEventListener {
 
+    private static final Logger logger = LoggerFactory.getLogger(ContextEventListener.class);
+    
     @Autowired
     private MenuService menuService;
 
@@ -27,8 +31,8 @@ public class ContextEventListener {
         if (!menuService.getMenuById(1L).blockOptional().isPresent()) {
             for (int i = 1; i < 20; i++) {
                 menuService.createMenu(new Menu((long) i, " Menu : " + i))
-                        .subscribeOn(Schedulers.newSingle("Menu : " + i + " thread"))
-                        .subscribe(menu -> System.out.println(menu.getName() + " created"));
+                        .subscribeOn(Schedulers.parallel())
+                        .subscribe(menu -> logger.info(menu.getName() + " created"));
             }
         }
 
@@ -36,8 +40,8 @@ public class ContextEventListener {
             for (int i = 1; i < 1001; i++) {
 
                 productService.createProduct(prepareProduct(i))
-                        .subscribeOn(Schedulers.newSingle("Product : " + i + " thread"))
-                        .subscribe(product -> System.out.println(product.getMobileNumber()+ " created"));
+                        .subscribeOn(Schedulers.parallel())
+                        .subscribe(product -> logger.info(product.getMobileNumber()+ " created"));
             }
         }    
     }
@@ -50,6 +54,7 @@ public class ContextEventListener {
         product.setMobileNumber("0532 555 " + ThreadLocalRandom.current().nextInt(10000, 100000));
         product.setShortNumber(ThreadLocalRandom.current().nextInt(10000, 100000));
         product.setUsername("Test User : " + i);
+        product.setPaymentType("Ödeme Tipi");
         return product;
     }
 }

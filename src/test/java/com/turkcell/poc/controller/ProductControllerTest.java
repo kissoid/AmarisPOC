@@ -1,7 +1,7 @@
 package com.turkcell.poc.controller;
 
-import com.turkcell.poc.dto.ProductDTO;
 import com.turkcell.poc.document.Product;
+import com.turkcell.poc.dto.ProductDTO;
 import com.turkcell.poc.service.ProductService;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +42,7 @@ public class ProductControllerTest {
 
         Mockito.doReturn(productFlux).when(productService).getProductList(0, 20);
 
-        Flux<ProductDTO> dtoFlux = webClient.get().uri("/api/products/getProductList?pageIndex=0&pageSize=20").exchange()
+        Flux<ProductDTO> dtoFlux = webClient.get().uri("/api/v1/products/getProductList?pageIndex=0&pageSize=20").exchange()
                 .expectStatus().isOk()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON_VALUE)
                 .returnResult(ProductDTO.class)
@@ -68,7 +68,7 @@ public class ProductControllerTest {
 
         Flux<ProductDTO> dtoFlux = webClient
                 .put()
-                .uri("/api/products/updateProductInfo")
+                .uri("/api/v1/products/updateProductInfo")
                 .contentType(MediaType.valueOf(MediaType.APPLICATION_JSON_VALUE))
                 .bodyValue(productDTOList)
                 .exchange()

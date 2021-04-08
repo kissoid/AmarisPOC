@@ -6,4 +6,11 @@ spring:
       database: amaris
       username: amaris
       password: amaris
+      
+logging:
+  level:
+    org: 
+      springframework: INFO 
+    com:
+      turkcell: INFO
 

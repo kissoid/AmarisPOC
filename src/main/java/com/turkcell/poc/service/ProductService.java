@@ -4,6 +4,8 @@ import com.turkcell.poc.document.Product;
 import com.turkcell.poc.repository.ProductRepository;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -16,6 +18,8 @@ import reactor.core.scheduler.Schedulers;
 
 @Service
 public class ProductService {
+    
+    private static final Logger logger = LoggerFactory.getLogger(ProductService.class);
 
     private final ProductRepository productRepository;
 
@@ -30,6 +34,7 @@ public class ProductService {
 
     @Transactional(propagation = Propagation.REQUIRED)
     public Flux<Product> updateProductInfo(List<Product> productList) {
+        logger.info("Parallel process started");
         return Flux.fromIterable(productList)
                 .parallel(2)
                 .runOn(Schedulers.parallel())

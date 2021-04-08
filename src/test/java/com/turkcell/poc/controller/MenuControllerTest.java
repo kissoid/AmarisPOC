@@ -1,7 +1,7 @@
 package com.turkcell.poc.controller;
 
-import com.turkcell.poc.dto.MenuDTO;
 import com.turkcell.poc.document.Menu;
+import com.turkcell.poc.dto.MenuDTO;
 import com.turkcell.poc.service.MenuService;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class MenuControllerTest {
 
         Mockito.doReturn(menuFlux).when(menuService).getMenuList();
 
-        Flux<MenuDTO> dtoFlux = webClient.get().uri("/api/menus/getMenuList").exchange()
+        Flux<MenuDTO> dtoFlux = webClient.get().uri("/api/v1/menus/getMenuList").exchange()
                 .expectStatus().isOk()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON_VALUE)
                 .returnResult(MenuDTO.class)
