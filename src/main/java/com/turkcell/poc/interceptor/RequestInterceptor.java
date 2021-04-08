@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.turkcell.poc.interceptor;
 
 import com.turkcell.poc.document.RequestLog;
@@ -21,10 +17,6 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 import reactor.core.scheduler.Schedulers;
 
-/**
- *
- * @author kissoid
- */
 @Component
 public class RequestInterceptor extends HandlerInterceptorAdapter {
 
