@@ -14,7 +14,7 @@ Service'ler geliştirilirken, Spring Reactive Web kullanılmıştır.
 
 ## Rest Service Endpoint adresleri
 
-## Swagger URL
+Swagger URL       : http://localhost:8080/swagger-ui.html
 
 http://localhost:8080/swagger-ui.html
 
