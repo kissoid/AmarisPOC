@@ -1,0 +1,171 @@
+2021-04-08 04:27:40 [main] INFO  c.t.p.c.ProductControllerTest - Starting ProductControllerTest using Java 11.0.10 on kissoidDELL with PID 92465 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-04-08 04:27:40 [main] DEBUG c.t.p.c.ProductControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-08 04:27:40 [main] INFO  c.t.p.c.ProductControllerTest - No active profile set, falling back to default profiles: default
+2021-04-08 04:27:41 [main] INFO  c.t.p.c.ProductControllerTest - Started ProductControllerTest in 1.602 seconds (JVM running for 2.441)
+2021-04-08 04:27:41 [parallel-1] INFO  c.t.poc.controller.ProductController - Product list requested
+2021-04-08 04:27:42 [parallel-2] INFO  c.t.poc.controller.ProductController - Product info update requested
+2021-04-08 04:27:42 [main] INFO  c.t.poc.service.ProductService - Parallel process started
+2021-04-08 04:27:42 [main] INFO  c.t.p.controller.MenuControllerTest - Starting MenuControllerTest using Java 11.0.10 on kissoidDELL with PID 92465 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-04-08 04:27:42 [main] DEBUG c.t.p.controller.MenuControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-08 04:27:42 [main] INFO  c.t.p.controller.MenuControllerTest - No active profile set, falling back to default profiles: default
+2021-04-08 04:27:42 [main] INFO  c.t.p.controller.MenuControllerTest - Started MenuControllerTest in 0.373 seconds (JVM running for 3.163)
+2021-04-08 04:27:42 [parallel-5] INFO  c.t.poc.controller.MenuController - Menu list requested
+2021-07-28 01:08:17 [main] INFO  c.t.p.c.ProductControllerTest - Starting ProductControllerTest using Java 11.0.10 on kissoidDELL with PID 104332 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-28 01:08:17 [main] DEBUG c.t.p.c.ProductControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-28 01:08:17 [main] INFO  c.t.p.c.ProductControllerTest - No active profile set, falling back to default profiles: default
+2021-07-28 01:08:18 [main] INFO  c.t.p.c.ProductControllerTest - Started ProductControllerTest in 1.461 seconds (JVM running for 2.223)
+2021-07-28 01:08:19 [parallel-1] INFO  c.t.poc.controller.ProductController - Product list requested
+2021-07-28 01:08:19 [parallel-2] INFO  c.t.poc.controller.ProductController - Product info update requested
+2021-07-28 01:08:19 [main] INFO  c.t.poc.service.ProductService - Parallel process started
+2021-07-28 01:19:26 [main] INFO  c.t.p.c.ProductControllerTest - Starting ProductControllerTest using Java 11.0.10 on kissoidDELL with PID 111198 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-28 01:19:26 [main] DEBUG c.t.p.c.ProductControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-28 01:19:26 [main] INFO  c.t.p.c.ProductControllerTest - No active profile set, falling back to default profiles: default
+2021-07-28 01:19:27 [main] INFO  c.t.p.c.ProductControllerTest - Started ProductControllerTest in 1.537 seconds (JVM running for 2.296)
+2021-07-28 01:19:27 [parallel-1] INFO  c.t.poc.controller.ProductController - Product list requested
+2021-07-28 01:19:27 [parallel-2] INFO  c.t.poc.controller.ProductController - Product info update requested
+2021-07-28 01:19:27 [main] INFO  c.t.poc.service.ProductService - Parallel process started
+2021-07-29 00:26:09 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:26:09 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 181475 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:26:09 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:26:09 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - No active profile set, falling back to default profiles: default
+2021-07-29 00:26:10 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.356 seconds (JVM running for 2.674)
+2021-07-29 00:28:16 [main] INFO  c.turkcell.poc.AmarisPocApplication - Starting AmarisPocApplication using Java 11.0.10 on kissoidDELL with PID 181794 (/home/kissoid/Projects/AmarisPOC/target/classes started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:28:16 [main] DEBUG c.turkcell.poc.AmarisPocApplication - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:28:16 [main] INFO  c.turkcell.poc.AmarisPocApplication - No active profile set, falling back to default profiles: default
+2021-07-29 00:28:40 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:28:40 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 181898 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:28:40 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:28:40 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - No active profile set, falling back to default profiles: default
+2021-07-29 00:28:41 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.307 seconds (JVM running for 2.577)
+2021-07-29 00:28:56 [main] INFO  c.turkcell.poc.AmarisPocApplication - Starting AmarisPocApplication using Java 11.0.10 on kissoidDELL with PID 182078 (/home/kissoid/Projects/AmarisPOC/target/classes started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:28:56 [main] DEBUG c.turkcell.poc.AmarisPocApplication - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:28:56 [main] INFO  c.turkcell.poc.AmarisPocApplication - No active profile set, falling back to default profiles: default
+2021-07-29 00:30:56 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:30:57 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 182833 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:30:57 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:30:57 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:30:58 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.369 seconds (JVM running for 2.808)
+2021-07-29 00:31:03 [main] INFO  c.turkcell.poc.AmarisPocApplication - Starting AmarisPocApplication using Java 11.0.10 on kissoidDELL with PID 183013 (/home/kissoid/Projects/AmarisPOC/target/classes started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:31:03 [main] DEBUG c.turkcell.poc.AmarisPocApplication - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:31:03 [main] INFO  c.turkcell.poc.AmarisPocApplication - The following profiles are active: dev
+2021-07-29 00:32:39 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:32:39 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 183415 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:32:39 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:32:39 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:32:40 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.378 seconds (JVM running for 2.865)
+2021-07-29 00:33:00 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:33:00 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 183630 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:33:00 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:33:00 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:33:02 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.456 seconds (JVM running for 2.8)
+2021-07-29 00:37:01 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:37:01 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 184330 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:37:01 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:37:01 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:37:02 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.392 seconds (JVM running for 2.699)
+2021-07-29 00:44:41 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:44:41 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 185395 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:44:41 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:44:41 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:44:42 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.346 seconds (JVM running for 2.837)
+2021-07-29 00:45:50 [main] INFO  c.turkcell.poc.AmarisPocApplication - Starting AmarisPocApplication using Java 11.0.10 on kissoidDELL with PID 185724 (/home/kissoid/Projects/AmarisPOC/target/classes started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:45:50 [main] DEBUG c.turkcell.poc.AmarisPocApplication - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:45:50 [main] INFO  c.turkcell.poc.AmarisPocApplication - The following profiles are active: dev
+2021-07-29 00:46:00 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:46:01 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 185821 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:46:01 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:46:01 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:46:02 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.252 seconds (JVM running for 2.514)
+2021-07-29 00:51:10 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:51:11 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 186644 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:51:11 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:51:11 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:51:12 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.291 seconds (JVM running for 2.554)
+2021-07-29 00:51:12 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 00:52:04 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:52:04 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 186876 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:52:04 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:52:04 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:52:05 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.253 seconds (JVM running for 2.501)
+2021-07-29 00:52:05 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 00:57:09 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:57:10 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 187517 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:57:10 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:57:10 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:57:11 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.166 seconds (JVM running for 2.413)
+2021-07-29 00:57:11 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 00:58:59 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 00:58:59 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 187850 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 00:58:59 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 00:58:59 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 00:59:00 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.233 seconds (JVM running for 2.464)
+2021-07-29 00:59:00 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:00:12 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:00:12 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 188082 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:00:12 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:00:12 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:00:13 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.223 seconds (JVM running for 2.454)
+2021-07-29 01:00:14 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:01:27 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:01:28 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 188440 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:01:28 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:01:28 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:01:29 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.264 seconds (JVM running for 2.475)
+2021-07-29 01:01:29 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:01:54 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:01:55 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 188654 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:01:55 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:01:55 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:01:56 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.283 seconds (JVM running for 2.599)
+2021-07-29 01:01:56 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:01:56 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:02:48 [main] INFO  c.turkcell.poc.AmarisPocApplication - Starting AmarisPocApplication using Java 11.0.10 on kissoidDELL with PID 188864 (/home/kissoid/Projects/AmarisPOC/target/classes started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:02:48 [main] DEBUG c.turkcell.poc.AmarisPocApplication - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:02:48 [main] INFO  c.turkcell.poc.AmarisPocApplication - The following profiles are active: dev
+2021-07-29 01:03:11 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:03:11 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 188977 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:03:11 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:03:11 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:03:12 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.326 seconds (JVM running for 2.575)
+2021-07-29 01:03:12 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:03:12 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:07:39 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:07:40 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 189428 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:07:40 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:07:40 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:07:41 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.271 seconds (JVM running for 2.528)
+2021-07-29 01:07:41 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:07:41 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:07:41 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:08:18 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:08:19 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 189645 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:08:19 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:08:19 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:08:20 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.293 seconds (JVM running for 2.717)
+2021-07-29 01:08:20 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:08:20 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:08:20 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:09:06 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:09:06 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 189863 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:09:06 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:09:06 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:09:07 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.245 seconds (JVM running for 2.575)
+2021-07-29 01:09:07 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:09:07 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:09:07 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:23:26 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:23:26 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 190975 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:23:26 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:23:26 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:23:28 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.231 seconds (JVM running for 2.56)
+2021-07-29 01:23:28 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:23:28 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:23:28 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:25:47 [main] INFO  c.t.p.s.ApplicationPropertyService - Update process started
+2021-07-29 01:25:47 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Starting ApplicationPropertyControllerTest using Java 11.0.10 on kissoidDELL with PID 192281 (started by kissoid in /home/kissoid/Projects/AmarisPOC)
+2021-07-29 01:25:47 [main] DEBUG c.t.p.c.ApplicationPropertyControllerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-07-29 01:25:47 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - The following profiles are active: dev
+2021-07-29 01:25:48 [main] INFO  c.t.p.c.ApplicationPropertyControllerTest - Started ApplicationPropertyControllerTest in 1.267 seconds (JVM running for 2.517)
+2021-07-29 01:25:48 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property list requested
+2021-07-29 01:25:48 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested
+2021-07-29 01:25:48 [boundedElastic-1] INFO  c.t.p.c.ApplicationPropertyController - Application property update requested

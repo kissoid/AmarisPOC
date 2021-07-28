@@ -1,4 +1,4 @@
-package com.turkcell.poc.document;
+package com.turkcell.poc.entity;
 
 import java.util.Objects;
 

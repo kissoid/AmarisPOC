@@ -1,12 +1,13 @@
 spring:
   application:
     name: poc
-  data:
-    mongodb:
-      database: amaris
-      username: amaris
-      password: amaris
-      
+  datasource:
+    url: r2dbc:oracle://exampledb.turkcell.com:1521/exampledb.service.name
+    username: amaris
+    password: amaris
+  profiles:
+      active: dev
+          
 logging:
   level:
     org: 

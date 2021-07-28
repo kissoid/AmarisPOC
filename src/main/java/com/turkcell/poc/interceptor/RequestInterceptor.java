@@ -1,8 +1,8 @@
 
 package com.turkcell.poc.interceptor;
 
-import com.turkcell.poc.document.RequestLog;
-import com.turkcell.poc.document.RequestParameter;
+import com.turkcell.poc.entity.RequestLog;
+import com.turkcell.poc.entity.RequestParameter;
 import com.turkcell.poc.service.RequestLogService;
 import java.util.Date;
 import java.util.UUID;
@@ -41,7 +41,7 @@ public class RequestInterceptor extends HandlerInterceptorAdapter {
                 .map(entry->new RequestParameter(entry.getKey(), entry.getValue()))
                 .collect(Collectors.toList()));
         requestLogService.createRequestLog(requestLog).subscribeOn(Schedulers.parallel()).subscribe();
-        logger.info("Request log saved to mongo db");
+        logger.info("Request log saved to oracle db");
         return true;
     }
 

@@ -1,6 +1,6 @@
 package com.turkcell.poc.repository;
 
-import com.turkcell.poc.document.RequestLog;
+import com.turkcell.poc.entity.RequestLog;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 

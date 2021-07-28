@@ -1,6 +1,6 @@
 package com.turkcell.poc.service;
 
-import com.turkcell.poc.document.RequestLog;
+import com.turkcell.poc.entity.RequestLog;
 import com.turkcell.poc.repository.RequestLogRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

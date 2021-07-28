@@ -1,12 +1,10 @@
-package com.turkcell.poc.document;
+package com.turkcell.poc.entity;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="RequestLog")
 public class RequestLog implements Serializable {
     
     @Id
