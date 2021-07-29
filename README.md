@@ -4,6 +4,10 @@
 
 Uygulamanın çalıştırılması için application.yaml dosyasını içerisindeki oracle database konfigürasyonunun yapılması gerekmektedir. Uygulama ilgili schema içerisine tabloları otomatik olarak create edecek şekilde configure edilmiştir.
 
+## Databae Erişimi
+
+Database erişimi için Oracle reactive R2DBC driver kullanılmıştır
+
 ## Rest Service'ler
 
 Service'ler geliştirilirken, Spring Reactive Web kullanılmıştır.
