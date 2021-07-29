@@ -5,62 +5,68 @@
  */
 package com.turkcell.poc.util;
 
-import java.security.InvalidKeyException;
-import java.security.Key;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 import java.util.Base64;
-import javax.crypto.BadPaddingException;
+
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
-/**
- *
- * @author kissoid
- */
 public class EncryptionUtil {
-    
-    private static final String AES = "AES";
-    private static final String SECRET = "secret-key";
 
-    private static Key key;
-    private static Cipher cipher;
-    
-    private EncryptionUtil(){
-        
-    }
+    private static SecretKeySpec secretKey;
+    private static byte[] key;
+    private final static  String secret = "secret-key-1234567";
 
-private static Key getKey(){
-    if(key == null){
-        key = new SecretKeySpec(SECRET.getBytes(), AES);
-    }
-    return key;
-}
-    
-private static Cipher getCipher() throws NoSuchAlgorithmException, NoSuchPaddingException{
-    if(cipher == null){
-        cipher = Cipher.getInstance(AES);
-    }
-    return cipher;
-}
-
-    public static String encrypt(String value) {
+    public static void setKey(String myKey)
+    {
+        MessageDigest sha = null;
         try {
-            getCipher().init(Cipher.ENCRYPT_MODE, getKey());
-            return Base64.getEncoder().encodeToString(getCipher().doFinal(value.getBytes()));
-        } catch (IllegalBlockSizeException | BadPaddingException | InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException ex) {
-            throw new IllegalStateException(ex);
-        } 
+            key = myKey.getBytes("UTF-8");
+            sha = MessageDigest.getInstance("SHA-1");
+            key = sha.digest(key);
+            key = Arrays.copyOf(key, 16);
+            secretKey = new SecretKeySpec(key, "AES");
+        }
+        catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static String decrypt(String value) {
-        try {
-            getCipher().init(Cipher.DECRYPT_MODE, getKey());
-            return new String(getCipher().doFinal(Base64.getDecoder().decode(value)));
-        } catch (InvalidKeyException | BadPaddingException | IllegalBlockSizeException | NoSuchAlgorithmException | NoSuchPaddingException ex ) {
-            throw new IllegalStateException(ex);
-        } 
+    public static String encrypt(String strToEncrypt)
+    {
+        try
+        {
+            setKey(secret);
+            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            return Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")));
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error while encrypting: " + e.toString());
+        }
+        return null;
     }
-    
+
+    public static String decrypt(String strToDecrypt)
+    {
+        try
+        {
+            setKey(secret);
+            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
+            cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            return new String(cipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error while decrypting: " + e.toString());
+        }
+        return null;
+    }
 }

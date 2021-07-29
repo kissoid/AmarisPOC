@@ -1,18 +1,29 @@
 package com.turkcell.poc.entity;
 
 import java.util.Objects;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 public class RequestParameter {
 
+    @Column(name = "name", nullable = false, length = 50)
     private String name;
-    private String[] value;
+    @Column(name = "value", nullable = false, length = 50)
+    private String value;
+    @JoinColumn(name = "request_log_id", referencedColumnName = "id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    private RequestLog requestLog;
 
     public RequestParameter() {
     }
 
     public RequestParameter(String name, String[] value) {
         this.name = name;
-        this.value = value;
+        if (value != null && value.length > 0) {
+            this.value = value[0];
+        }
     }
 
     public String getName() {
@@ -23,12 +34,20 @@ public class RequestParameter {
         this.name = name;
     }
 
-    public String[] getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(String[] value) {
+    public void setValue(String value) {
         this.value = value;
+    }
+
+    public RequestLog getRequestLog() {
+        return requestLog;
+    }
+
+    public void setRequestLog(RequestLog requestLog) {
+        this.requestLog = requestLog;
     }
 
     @Override

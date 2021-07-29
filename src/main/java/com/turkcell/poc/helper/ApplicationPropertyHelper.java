@@ -23,7 +23,7 @@ public class ApplicationPropertyHelper {
     
     
     public static void prepareForCreate(ApplicationProperty applicationProperty, Authentication authentication){
-        applicationProperty.setCreateUser((String)authentication.getPrincipal());
+        applicationProperty.setUpdateUser(authentication.getName());
         applicationProperty.setCreateDate(new Date());
         if(!StringUtil.isBlankOrNull(applicationProperty.getValue()) && StringUtil.equals(applicationProperty.getValueEncrypted(), YesNoEnum.YES.getValue())){
             applicationProperty.setValue(EncryptionUtil.encrypt(applicationProperty.getValue()));
@@ -37,7 +37,7 @@ public class ApplicationPropertyHelper {
     }
 
     public static void prepareForUpdate(ApplicationProperty applicationProperty, Authentication authentication){
-        applicationProperty.setUpdateUser((String)authentication.getPrincipal());
+        applicationProperty.setUpdateUser(authentication.getName());
         applicationProperty.setUpdateDate(new Date());
         if(!StringUtil.isBlankOrNull(applicationProperty.getValue()) && StringUtil.equals(applicationProperty.getValueEncrypted(), YesNoEnum.YES.getValue())){
             applicationProperty.setValue(EncryptionUtil.encrypt(applicationProperty.getValue()));

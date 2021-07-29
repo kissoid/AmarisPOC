@@ -77,8 +77,10 @@ public class ApplicationPropertyControllerTest {
                 .contentType(MediaType.valueOf(MediaType.APPLICATION_JSON_VALUE))
                 .bodyValue(applicationPropertyDTO)
                 .exchange()
-                .expectStatus().isOk()
-                .expectHeader().contentType(MediaType.APPLICATION_JSON_VALUE)
+                .expectStatus()
+                .isOk()
+                .expectHeader()
+                .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .returnResult(ApplicationPropertyDTO.class)
                 .getResponseBody();
 
@@ -139,6 +141,7 @@ public class ApplicationPropertyControllerTest {
         applicationProperty.setGpValue("ccc");
         applicationProperty.setGpValueEncrypted("Y");
         applicationProperty.setDescription("test description");
+        applicationProperty.setCreateUser("Test User");
 
         return applicationProperty;
     }
