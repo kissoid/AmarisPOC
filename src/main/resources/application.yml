@@ -7,6 +7,9 @@ spring:
     password: amaris
   profiles:
       active: dev
+  jpa:
+      generate-ddl: true
+      hibernate.dd-auto: update
           
 logging:
   level:
@@ -14,4 +17,5 @@ logging:
       springframework: INFO 
     com:
       turkcell: INFO
+
 

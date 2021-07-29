@@ -2,11 +2,7 @@
 
 ## Uygulamanın çalıştırılması
 
-Kurulu olduğu bilgisayardaki MongoDB'ye, default portu olan 27017 olan default portu üzerinden bağlanmaya çalışır. Bağlantı için ihtiyaç duyduğu database, kullanıcı adı ve şifre aşağıda  belirtilmiştir.
-
-database: amaris,
-username: amaris,
-password: amaris
+Uygulamanın çalıştırılması için application.yaml dosyasını içerisindeki oracle database konfigürasyonunun yapılması gerekmektedir. Uygulama ilgili schema içerisine tabloları otomatik olarak create edecek şekilde configure edilmiştir.
 
 ## Rest Service'ler
 
@@ -18,91 +14,70 @@ Service'ler geliştirilirken, Spring Reactive Web kullanılmıştır.
 
 Swagger URL       : http://localhost:8080/swagger-ui.html
 
-### Menu listesini almak için : 
 
-Service Adresi  : http://localhost:8080/api/v1/menus/getMenuList 
+### Application property listesini almak için : 
 
-Method          : GET
+Bu serviste paging yapılmıştır. Aşağıdaki örnekte ilk 20 adet kayıt getirilmektedir. 
 
-### Ürün lisesini almak için : 
-
-Bu serviste paging yapılmıştır. Aşağıdaki örnekte ilk 20 adet kayıt getirilmektedir. Örnek olarak uygulama açılışında database'e 1000 adet kayıt atılacaktır. Tüm kayıtları bir defada görmek için pageSize parametre değerini 1000 veya üzeri bir değer olarak değiştirmeniz yeterlidir.
-
-Service Adresi  : http://localhost:8080/api/v1/products/getProductList?pageIndex=0&pageSize=20
+Service Adresi  : http://localhost:8080/api/v1/applications/properties?pageIndex=0&pageSize=20
 
 Method          : GET
 
 
-### Ürün kısa numarasılarını update etmek için : 
+### Application property create etmek için : 
 
-Bu servis request body'sinde Json listesi alır ve bu listedeki kaytlar üzerinde işlem yapmak için paralel çalışmak üzere iki thread kullanır.
+Service Adresi  : http://localhost:8080/api/v1/applications/properties 
 
-Service Adresi  : http://localhost:8080/api/v1/products/updateProductInfo
+Method          : POST
+
+
+{
+    "key": "asdasdasd",
+    "value":"aaaaaa",
+    "valueEncrypted": "Y", //value attribute'unun database'e encrypted veya raw şekilde kaydedilmesi için Y (Yes) veya N (No) değeri gönderilmelidir.
+    "odmValue": "bbbbb",
+    "odmValueEncrypted": "N", //odm value attribute'unun database'e encrypted veya raw şekilde kaydedilmesi için Y (Yes) veya N (No) değeri gönderilmelidir.
+    "gpValue": "ccccc",
+    "gpValueEncrypted": "Y",  //gp value attribute'unun database'e encrypted veya raw şekilde kaydedilmesi için Y (Yes) veya N (No) değeri gönderilmelidir.
+    "description" : "test description"
+}
+
+
+### Application property update etmek için : 
+
+Service Adresi  : http://localhost:8080/api/v1/applications/properties 
 
 Method          : PUT
 
 Örnek Json:
 
-[
-   {
-      "id":1,
-      "mobileNumber":"0532 555 92614",
-      "username":"Test User : 1",
-      "line":"Hat",
-      "lineType":"Hat Tipi",
-      "paymentType":"Ödeme Tipi",
-      "shortNumber":48938
-   },
-   {
-      "id":2,
-      "mobileNumber":"0532 555 74308",
-      "username":"Test User : 2",
-      "line":"Hat",
-      "lineType":"Hat Tipi",
-      "paymentType":"Ödeme Tipi",
-      "shortNumber":96610
-   },
-   {
-      "id":3,
-      "mobileNumber":"0532 555 16671",
-      "username":"Test User : 3",
-      "line":"Hat",
-      "lineType":"Hat Tipi",
-      "paymentType":"Ödeme Tipi",
-      "shortNumber":90652
-   },
-   {
-      "id":4,
-      "mobileNumber":"0532 555 27017",
-      "username":"Test User : 4",
-      "line":"Hat",
-      "lineType":"Hat Tipi",
-      "paymentType":"Ödeme Tipi",
-      "shortNumber":54725
-   },
-   {
-      "id":5,
-      "mobileNumber":"0532 555 70383",
-      "username":"Test User : 5",
-      "line":"Hat",
-      "lineType":"Hat Tipi",
-      "paymentType":"Ödeme Tipi",
-      "shortNumber":58453
-   }
-]
+{
+    "id": 1,
+    "key": "asdasdasd",
+    "value":"aaaaaa",
+    "valueEncrypted": "Y", //value attribute'unun database'e encrypted veya raw şekilde kaydedilmesi için Y (Yes) veya N (No) değeri gönderilmelidir.
+    "odmValue": "bbbbb",
+    "odmValueEncrypted": "N", //odm value attribute'unun database'e encrypted veya raw şekilde kaydedilmesi için Y (Yes) veya N (No) değeri gönderilmelidir.
+    "gpValue": "ccccc",
+    "gpValueEncrypted": "Y",  //gp value attribute'unun database'e encrypted veya raw şekilde kaydedilmesi için Y (Yes) veya N (No) değeri gönderilmelidir.
+    "description" : "test description"
+}
 
+## Şifreleme
+   
+   İlgili değerler database'e şifreli bir şekilde kaydedileceği zaman şifreleme için AES simetrki şifreleme yöntemi kullanılmıştır.
 
 ## Logging
 
-Loglama için logback kullanılmıştır.
+Loglama için logback kullanılmıştır. 
 
 ## Service Request Logging
 
-Servise gelen requestve detayları, MongoDB üzerindeki Amaris DB'si altındaki RequestLog adlı collectiona içerisine kaydedilmektedir. 
+Uygulama içerisindeki Request interceptor. gelen requestin detaylarını database'e kaydeder.
 
 ## Unit Test
 
-Menu ve Product servisleri için Unit Test'ler oluşturulmuştur.
+Application Property servisleri için Unit Test'ler oluşturulmuştur.
 
 ## Dockerize
 
